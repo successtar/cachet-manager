@@ -3,7 +3,7 @@
 /**
 * PHP script to Manage Updates on the Cachet Status Page by Hammed Olalekan Osanyinpeju aka Successtar
 
-* Updated Version and documentation of this available at https://github.com/successtar/cachet-manager
+* Updated Version and documentation of this available at https:\/\/github.com/successtar/cachet-manager
 
 * Suggestions, corrections and critics are highly welcome.
 
