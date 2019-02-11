@@ -94,7 +94,6 @@ class UpdateManager{
         	CURLOPT_FOLLOWLOCATION => true,   // follow redirects
         	CURLOPT_RETURNTRANSFER => 1,	  //Return data
         	CURLOPT_MAXREDIRS      => 2,     // stop after 2 redirects
-        	CURLOPT_USERAGENT      => "HollaTags Status", // name of client
         	CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
         	CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
         	CURLOPT_TIMEOUT        => 120,    // time-out on response
