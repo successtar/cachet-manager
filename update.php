@@ -78,7 +78,7 @@ class UpdateManager{
 		exec("ping -c 1  ".$url_host[0], $out);
 		$stopTime = microtime(true) * 1000;
 		//If pinging is successful return the time taken for the transaction else return false
-		if ($out){
+		if ($out && count($out) >= 6){
   			return ($stopTime - $startTime);
 		}else{
   			return false;
