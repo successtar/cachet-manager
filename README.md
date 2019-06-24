@@ -30,6 +30,8 @@
 
 		The script check host availabilty using a ping command using exec() function which might not be allowed for some share hosting due to security reasons. Verify if your host allow the function by running the script below;
 
+The code is as follow 
+
 	<?php
 
 	 exec("ping -c 1 google.com", $out);
@@ -41,7 +43,7 @@
 
 	If you get "exec() command is allowed on this host. Nothing to worry about." as response without any error after running the php code above, the script should work perfectly for you.
 
-	If you get error message or warning it means you will have to modify the script before it can work for you.
+	Hence, if you get error message or warning it means you will have to modify the script before it can work for you.
 
 	Go to the script, change 	
 
@@ -79,7 +81,7 @@
 			}
 		}
 
-	This will still work but only for url that can be accessed via https or http and lower little performance compare to when ping is used.
+	This will still work but only for url that can be accessed via https or http and lower performance compare to when ping is used.
 
 	
 *	Finally, if you follow the guide properly, the script should work for you. Suggestion, correction and critics are highly welcome.
