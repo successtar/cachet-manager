@@ -92,7 +92,7 @@ class UpdateManager{
 			
 			/*If Metric was created successfully enter here to obtain the new metric id */
 			
-			if ($new_metric[0]['data']['name'] == $metric_name & $new_metric[1]['http_code'] === 200){
+			if ($new_metric[0]['data']['name'] == $metric_name && $new_metric[1]['http_code'] === 200){
 				
 				/* Load updated Metrics */
 				
@@ -236,7 +236,7 @@ class UpdateManager{
 	
 	$timer = strtotime(date("Y-m-d H:i:00")); 
 
-	if ($loadCompo === false | $loadMetrics === false){
+	if ($loadCompo === false || $loadMetrics === false){
 		
 		/* No connection to Status Page */
 		
@@ -266,7 +266,7 @@ class UpdateManager{
 					
 					/* Update Metrics for App and Services group */
 					
-					if ($compo['group_id'] === 2 | $compo['group_id'] === 3){				
+					if ($compo['group_id'] === 2 || $compo['group_id'] === 3){				
 						
 						/* Get component Response Time metric Id */
 						
