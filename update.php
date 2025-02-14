@@ -92,7 +92,7 @@ class UpdateManager{
 			
 			/*If Metric was created successfully enter here to obtain the new metric id */
 			
-			if ($new_metric[0]['data']['name'] == $metric_name && $new_metric[1]['http_code'] === 200){
+			if ($new_metric[0]['data']['name'] == $metric_name && ($new_metric[1]['http_code'] === 200 || $new_metric[1]['http_code'] === 201)){
 				
 				/* Load updated Metrics */
 				
