@@ -1,10 +1,10 @@
-# cachet-manager
+# cachet-manager for Cachet v2.x
 
  * Cachet is an open source web application used by IT establishments to communicate downtime and system outages to their customers, teams and shareholders. Read more about cachet on their official page http://cachethq.io/.
  
  * This is a PHP script to Manage Updates on the Cachet Status Page by Hammed Olalekan Osanyinpeju aka Successtar
  
- * It is one of the third party application for automating systems status update on the status page. Other similar third party application available at https://docs.cachethq.io/docs/addons
+ * It is one of the third party application for automating systems status update on the status page. Other similar third party application available at https://docs.cachethq.io/v2.x/client-libraries
 
  * This script serve as an agent to update status of components on cachet status page when the host is inactive and when it is active
 
