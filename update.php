@@ -114,17 +114,21 @@ class UpdateManager{
 
 	public function pingUrl($url){
 		
-		/* Filter url leaving the host name for pinging */
+		/* Parse URL and safely extract the host name for pinging */
 
-		$url = str_replace("https://", "", str_replace("http://", "", str_replace("www.", "", $url)));
+		$parsed_url = parse_url($url);
 
-		$url_host = explode("/", $url);
+		$host = isset($parsed_url['host']) ? $parsed_url['host'] : $parsed_url['path'];
+
+		if (empty($host)){
+			return false;
+		}
 
 		/* Ping the host name and set the time before and after pinging to measure load time */
 
 		$startTime = microtime(true) * 1000;
 
-		exec("ping -c 1  ".$url_host[0], $out);
+		exec("ping -c 1 " . escapeshellarg($host), $out);
 
 		$stopTime = microtime(true) * 1000;
 
