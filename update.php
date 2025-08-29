@@ -128,13 +128,13 @@ class UpdateManager{
 
 		$startTime = microtime(true) * 1000;
 
-		exec("ping -c 1 " . escapeshellarg($host), $out);
+		exec("ping -c 1 " . escapeshellarg($host), $out, $exitCode);
 
 		$stopTime = microtime(true) * 1000;
 
 		/* If pinging is successful return the time taken for the transaction else return false */
 
-		if ($out && count($out) >= 6){
+		if ($exitCode === 0){
 
 			return ($stopTime - $startTime);
 		}
