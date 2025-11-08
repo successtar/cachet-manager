@@ -204,9 +204,16 @@ class UpdateManager{
     		
 		/* Execute request and return the response with transaction informations */
 		
-    		$content  = json_decode(curl_exec($ch), true);
+		$response = curl_exec($ch);
+		
+		$content  = json_decode($response, true);
    		
 		$info = curl_getinfo($ch);
+		
+		if ($response === false){
+			$info['curl_error'] = curl_error($ch);
+			$info['curl_errno'] = curl_errno($ch);
+		}
    		
    		curl_close($ch);
 
